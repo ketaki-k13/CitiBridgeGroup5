@@ -1,0 +1,24 @@
+.text-center {
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+.example-container {
+  height: 100%;
+  width: 70%;
+  text-align: center;
+}
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mat-form-field {
+  width: 100%;
+}
+.mt-top {
+  margin-top: 30px;
+}
+.mt-top-2 {
+  margin-top: 10px;
+}
