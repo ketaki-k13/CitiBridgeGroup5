@@ -19,7 +19,8 @@ public class YahooStockApi
     {
     	HashMap<String, BigDecimal> hs=new HashMap<>();
         String[] stock ={"HDFC.BO", "HDFC.NS","SBILIFE.BO", "SBILIFE.NS","TCS.BO","TCS.NS",
-        		"TATASTEEL.BO","TATASTEEL.NS","WIPRO.BO","WIPRO.NS","CIPLA.BO","CIPLA.NS"};
+        		"TATASTEEL.BO","TATASTEEL.NS","WIPRO.BO","WIPRO.NS","CIPLA.BO","CIPLA.NS","DIVISLAB.BO","DIVISLAB.NS","SUNPHARMA.BO",
+        				"SUNPHARMA.NS","ITC.BO","ITC.NS","APOLLOHOSP.BO","APOLLOHOSP.NS","ADANIPORTS.BO","ADANIPORTS.NS"};
         Stock[]name_stock=new Stock[stock.length];
         for(int i=0;i<stock.length;i++) {
         	name_stock[i]=YahooFinance.get(stock[i]);
@@ -43,7 +44,7 @@ public class YahooStockApi
         		if (iend != -1) 
         		{
         		    subString= stockname.substring(0 , iend); 
-        		    hs.put(subString, diff);
+        		    hs.put(subString, diff.abs());
         		}
         	}
         	
