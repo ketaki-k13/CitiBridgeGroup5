@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>
+
+NSE BSE Arbitarage System
+
+</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script type="text/javascript">
+
+var app = angular.module("tablesApp", []);
+
+app.controller("tablesCtrl", function ($scope) {
+
+$scope.users = [{
+
+name: "ICDS",
+
+nse: 37.95,
+
+bse:36.45,
+
+arbitarge: 4.12
+
+}, {
+
+name: "Arrow Greentech",
+
+nse: 109.10,
+
+bse:105.05,
+
+arbitarge: 3.86
+
+}, {
+
+name: "Softtech Engine",
+
+nse: 171.25,
+
+bse: 165.85,
+
+arbitarge: 3.26
+
+}, {
+
+name: "Alkali Metals",
+
+nse: 98.90,
+
+bse:96.05,
+
+arbitarge: 2.97
+
+}];
+
+});
+
+</script>
+
+
+<style type="text/css">
+    
+
+    table, tr , td {
+    
+    border: 1px solid grey;
+    
+    border-collapse: collapse;
+    
+    padding: 5px;
+    
+    }
+    
+    table tr:nth-child(odd) {
+    
+    background-color: #d6f1f8;
+    
+    }
+    
+    table tr:nth-child(even) {
+    
+    background-color: #ffffff;
+    
+    }
+    
+    </style>
+
+</head>
+<center>
+<body ng-app="tablesApp">
+
+<div ng-controller="tablesCtrl">
+
+<h2>NSE BSE Arbitarage System</h2>
+
+<table>
+
+<tr>
+
+<td>Name</td>
+
+<td>NSE Value</td>
+
+<td>BSE Value</td>
+
+<td> Arbitarage</td>
+
+</tr>
+
+<tr ng-repeat="user in users">
+
+<td>{{user.name}}</td>
+
+<td>{{user.nse}}</td>
+
+<td>{{user.bse}}</td>
+
+<td>{{user.arbitarge}}</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</center>
+</html>
